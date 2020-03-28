@@ -9,8 +9,7 @@ public class TrieMapNode{
   
   public TrieMapNode(){
    children = new HashMap<Character, TrieMapNode>();
-   value = null;
-  }
+   value = null; }
   
   public String getValue(){
     return value;

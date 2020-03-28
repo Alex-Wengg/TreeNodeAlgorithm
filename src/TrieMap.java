@@ -4,20 +4,28 @@
 import java.util.ArrayList;
 public class TrieMap implements TrieMapInterface{
   TrieMapNode root;
-  
   public TrieMap(){
-    
+    root  = new TrieMapNode();
   }
-  
+
   //Indirectly recursive method to meet definition of interface
   public void put(String key, String value){
-    
+
+    if(root == null){
+      put(this.root,key, value);
+      return;
+    }
+     return;
   }
+
   
   //Recursive method
   //Note: arguments are only a suggestion, you may use your own if you devise a different recursive solution
   public void put(TrieMapNode current, String curKey, String value){
-    
+     if(current.getChildren().isEmpty()){
+      current.getChildren().put(this.root,curKey,value);
+    }
+
   }
   
   //Indirectly recursive method to meet definition of interface
@@ -28,9 +36,14 @@ public class TrieMap implements TrieMapInterface{
   //Recursive method
   //Note: arguments are only a suggestion, you may use your own if you devise a different recursive solution
   public String get(TrieMapNode current, String curKey){
+
     return "";
   }
-  
+
+
+
+
+
   //Indirectly recursive method to meet definition of interface
   public boolean containsKey(String key){
     return false;
