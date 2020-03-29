@@ -29,8 +29,10 @@ public class TriMapTester{
     
     //Check that the correct value is associated with each key
     for(String s: posWords){
-      if(!map.containsKey(s) || !map.get(s).equals(s)){
-        countErrors++;
+       if(!map.containsKey(s) || !map.get(s).equals(s)){
+        // System.out.println(map.get(s));
+
+         countErrors++;
       }
     }
     System.out.println("Number of incorrect values for keys: " + countErrors);
