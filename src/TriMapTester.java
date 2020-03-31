@@ -29,8 +29,9 @@ public class TriMapTester{
     
     //Check that the correct value is associated with each key
     for(String s: posWords){
-       if(!map.containsKey(s) || !map.get(s).equals(s)){
-        // System.out.println(map.get(s));
+      //System.out.println(map.containsKey(s));
+
+      if(!map.containsKey(s) || !map.get(s).equals(s)){
 
          countErrors++;
       }
@@ -52,6 +53,8 @@ public class TriMapTester{
     //Check the values returned for a number of prefix values
     //Compares the returned result to the true result
     String[] searchPrefixes = {"add", "bril", "cat", "cri", "derri", "mar", "tra", "lor", "marveled", "rit"};
+
+   // String[] searchPrefixes = {"add", "bril"};
     for(String prefix: searchPrefixes){
       System.out.println("Getting values for prefix: " + prefix);
       ArrayList<String> realResult = matchPrefix(prefix, posWords);
@@ -63,6 +66,16 @@ public class TriMapTester{
       System.out.println("Error Count: " + countErrors);
     }
     System.out.println("Total Errors: " + totalErrors);
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+    map.print();
+
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   }
   
   public static int countDifference(ArrayList<String> realResult, ArrayList<String> yourResult){
