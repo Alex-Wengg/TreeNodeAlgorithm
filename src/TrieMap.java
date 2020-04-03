@@ -39,8 +39,7 @@ public class TrieMap implements TrieMapInterface {
 
   //Recursive method
   public String get(TrieMapNode current, String curKey) {
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    if (findNode(root,curKey)!=null) {
+     if (findNode(root,curKey)!=null) {
       return findNode(root, curKey).getValue();
     }
     return null;
@@ -85,8 +84,7 @@ public class TrieMap implements TrieMapInterface {
     if (current != null) {
       //loop through to check all the subnodes until they arr at the end node
       for (Character s : current.getChildren().keySet()) {
-        //here we add all the children node in each node
-        words.addAll(getSubtreeKeys(current.getChildren().get(s)));
+         words.addAll(getSubtreeKeys(current.getChildren().get(s)));
       }
       //
       if ((!words.contains(current.getValue()))&&current.getValue()!=null){
